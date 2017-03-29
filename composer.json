@@ -1,0 +1,42 @@
+{
+  "name": "adelowo/laravel-gbowo",
+  "license": "MIT",
+  "description": "Laravel bridge for the Gbowo payment library",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Lanre Adelowo",
+      "email": "me@lanreadelowo.com",
+      "role": "Developer",
+      "homepage": "http://lanreadelowo.com"
+    }
+  ],
+  "require": {
+    "php": "~7.0",
+    "adelowo/gbowo": "^1.4",
+    "laravel/framework" : "^5.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bridge\\Laravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Gbowo\\Tests\\": "tests"
+    }
+  },
+  "keywords": [
+    "Payments",
+    "Paystack",
+    "AmplifyPay",
+    "Nigerian Payments",
+    "php",
+    "github",
+    "laravel",
+    "gbowo"
+  ]
+}
