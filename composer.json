@@ -14,8 +14,7 @@
   "require": {
     "php": "^7.0",
     "adelowo/gbowo": "^1.4",
-    "illuminate/contracts": "^5.1",
-    "illuminate/support": "^5.1"
+    "laravel/framework": "^5.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.0"
