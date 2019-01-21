@@ -13,6 +13,7 @@ use Illuminate\Foundation\Application;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\Prophet;
+use GuzzleHttp\Client;
 
 class GbowoManagerTest extends TestCase
 {
@@ -92,10 +93,19 @@ class GbowoManagerTest extends TestCase
         $stripeAdapter = new class implements AdapterInterface
         {
             const ADAPTER_NAME = "stripe";
+            protected $httpClient;
+
+            public function __construct() {
+                $this->httpClient = new Client();
+            }
 
             public function charge(array $data = [])
             {
                 return "Charged by " . ucfirst(self::ADAPTER_NAME);
+            }
+
+            public function getHttpClient() : Client {
+                return $this->httpClient;
             }
         };
 
